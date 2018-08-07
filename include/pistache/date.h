@@ -52,6 +52,7 @@
 #include <string>
 #include <utility>
 #include <type_traits>
+#include <memory>
 
 #ifdef __GNUC__
 # pragma GCC diagnostic push
@@ -4232,7 +4233,7 @@ struct fields
     weekday               wd{7u};
     time_of_day<Duration> tod{};
 
-    fields() = default;
+    fields(){}
 
     fields(year_month_day ymd_) : ymd(ymd_) {}
     fields(weekday wd_) : wd(wd_) {}
